@@ -1,0 +1,33 @@
+#include<stdio.h>
+void inputarray(int a[],int *n)
+{
+printf("enter the limit \n");
+scanf("%d",n);
+printf("enter  elements\n");
+for(int i=0;i<*n;i++)
+ {
+   scanf("%d",&a[i]);
+ }
+}
+ int sumarray(int b[],int n )
+ {
+ int sum=0;
+for(int i=0;i<n;i++)
+   {
+     sum=sum+b[i];
+    }
+return sum;
+ }
+
+int outputarray(int sum)
+ {
+   printf("the summation is %d",sum);
+ }
+ void main()
+{
+  int a[20],n;
+inputarray(a,&n);
+int s=sumarray(a,n);
+outputarray(s);
+}
+
