@@ -1,0 +1,33 @@
+#include<stdio.h>
+int input(int *num1,int *den1,int *num2,int *den2)
+ {
+printf("enter the numerator and denominator of variable 1 \n");
+scanf("%d %d",num1,den1);
+printf("enter the numerator and denominator of variable 2 \n");
+scanf("%d %d",num2,den2);
+}
+int numer(int num1,int num2,int den1,int den2)
+{
+    int numerator;
+    numerator= (num1*den2)+(num2*den1);
+    return numerator;
+}
+int denom(int den1,int den2)
+{
+ int denominator;
+  denominator=(den1*den2);
+  return denominator;
+}
+void output(int num1,int den1,int num2,int den2,int nume,int deno)
+{
+  printf("the summation of %d/%d + %d/%d is %d/%d ",num1,den1,num2,den2,nume,deno);
+}
+int main()
+{
+ int num1,num2,den1,den2,nume,deno;
+ input(&num1,&den1,&num2,&den2);
+ nume=numer(num1,num2,den1,den2);
+ deno=denom(den1,den2);
+ output(num1,den1,num2,den2,nume,deno);
+  }
+
